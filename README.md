@@ -1,53 +1,50 @@
-# AI-Driven Predictive Maintenance System for Switchgear
+# 🛠️ Predictive Maintenance System
+> **Turning Reactive Repairs into Proactive Insights with Machine Learning.**
 
-This is a comprehensive, full-stack predictive maintenance application designed to predict switchgear component failures 60-120 days in advance using time-series electrical parameters.
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688.svg)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![Docker](https://img.shields.io/badge/Deployment-Docker-2496ED.svg)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Highlights
-- **ML Model:** XGBoost trained on synthetic degradation data (Contact Resistance, Temperature, Switching Cycles, Voltage Stability, Insulation Resistance).
-- **Backend:** Python FastAPI serving real-time predictions and historical data.
-- **Frontend:** React + Vite + Tailwind CSS dashboard providing a stunning, highly-responsive visualization of fleet health, predictive alerts, and time-series charts.
+---
 
-## Project Structure
-- `/backend`: Python FastAPI application, Data Generation scripts, and ML Training scripts.
-- `/frontend`: React dashboard application.
+## 📌 Overview
+Predictive maintenance is a game-changer for Industry 4.0. This project utilizes machine learning to monitor equipment health in real-time, predicting potential failures before they occur. By analyzing process parameters like temperature, torque, and rotational speed, this system helps industries minimize downtime and maximize operational efficiency.
 
-## How to Run
+### 🎯 Key Objectives
+* **Binary Classification:** Predict whether a machine will fail or not.
+* **Multi-Class Classification:** Identify the *type* of failure (e.g., Power Failure, Tool Wear, Heat Dissipation).
+* **Real-time Insights:** Provide an intuitive dashboard for engineers to monitor metrics instantly.
 
-### Backend
-1. Open a terminal and navigate to `backend/`.
-2. Create and activate a virtual environment:
+---
+
+## 🚀 System Architecture
+
+The application is built using a modern decoupled architecture:
+1. **Frontend:** A sleek **Streamlit** dashboard for user interaction and data visualization.
+2. **Backend:** A robust **FastAPI** server that handles model inference and data processing.
+3. **ML Engine:** Trained models (XGBoost/Random Forest) capable of high-precision failure detection.
+4. **DevOps:** Fully containerized using **Docker** for seamless deployment.
+
+---
+
+## 📊 Features
+- [x] **Predictive Modeling:** High-accuracy failure prediction based on synthetic industrial datasets.
+- [x] **Exploratory Data Analysis (EDA):** Built-in visualizations for sensor data correlations.
+- [x] **Interactive UI:** Input machine parameters manually to get instant risk assessments.
+- [x] **API Access:** Integrated FastAPI documentation (Swagger UI) for external integrations.
+
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+* Python 3.8+
+* Docker (Optional but recommended)
+
+### Installation
+1. **Clone the repository:**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   # (or pip install fastapi uvicorn pandas scikit-learn xgboost pydantic python-multipart)
-   ```
-4. Generate the dataset and train the model:
-   ```bash
-   python data_simulator.py
-   python train_model.py
-   ```
-5. Start the backend API server:
-   ```bash
-   uvicorn main:app --reload --port 8000
-   ```
-
-### Frontend
-1. Open a new terminal and navigate to `frontend/`.
-2. Install Node dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open your browser and navigate to `http://localhost:5173` to see the dashboard.
-
-## Key Features
-- **Predictive Accuracy:** 99% precision, 98% recall on synthetic held-out validation data.
-- **Real-Time Dashboards:** SVG-based gauge charts, time-series visualization using Recharts.
-- **Automated Alerts:** Units are automatically flagged based on their AI-calculated failure probability before they break.
+   git clone [https://github.com/usergotnewexp/predictive-maintenance.git](https://github.com/usergotnewexp/predictive-maintenance.git)
+   cd predictive-maintenance
