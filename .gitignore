@@ -1,0 +1,10 @@
+node_modules/
+backend/venv/
+backend/__pycache__/
+backend/data/*.csv
+backend/models/*.joblib
+frontend/dist/
+frontend/node_modules/
+.env
+.DS_Store
+*.log
